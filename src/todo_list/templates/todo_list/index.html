@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todo_list/css/beer.min.css' %}">
+    <script type="module" src="{% static 'todo_list/js/beer.min.js' %}"></script>
+    <script type="module" src="{% static 'todo_list/js/material-dynamic-colors.min.js' %}"></script>
+    
+    <title>Todo List</title>
+</head>
+<body class="light">
+    <nav class="left m l">
+        <img src="https://www.beercss.com/favicon.png" class="circle margin">
+        <a>
+          <i>home</i>
+          <div>Home</div>
+        </a>
+        <a>
+          <i>search</i>
+          <div>Search</div>
+        </a>
+        <a>
+          <i>share</i>
+          <div>Share</div>
+        </a>
+        <a>
+          <i>more_vert</i>
+          <div>More</div>
+        </a>
+      </nav>
+      
+      <nav class="bottom s">
+        <a>
+          <i>home</i>
+        </a>
+        <a>
+          <i>search</i>
+        </a>
+        <a>
+          <i>share</i>
+        </a>
+        <a>
+          <i>more_vert</i>
+        </a>
+      </nav>
+      
+      <main class="responsive">
+        <img src="https://www.beercss.com/beer-and-woman.jpg" class="responsive round">
+        <h3>Welcome</h3>
+        <h5>The beer is ready!</h5>
+      </main>
+</body>
+</html>
