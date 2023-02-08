@@ -9,11 +9,24 @@
     <script type="module" src="{% static 'todo_list/js/beer.min.js' %}"></script>
     <script type="module" src="{% static 'todo_list/js/material-dynamic-colors.min.js' %}"></script>
     
+    <script>
+      function toggleTheme() {
+        let currentTheme = document.getElementById('body').classList[0];
+        if (currentTheme == "light") {
+          document.getElementById('body').classList.remove('light');
+          document.getElementById('body').classList.add('dark');
+        } else {
+          document.getElementById('body').classList.remove('dark');
+          document.getElementById('body').classList.add('light');
+        }
+      }
+    </script>
     <title>Todo List</title>
 </head>
-<body class="light">
+<body class="light"  id="body">
     <nav class="left m l">
         <img src="https://www.beercss.com/favicon.png" class="circle margin">
+        <button onclick="toggleTheme()">Theme</button>
         <a>
           <i>home</i>
           <div>Home</div>
