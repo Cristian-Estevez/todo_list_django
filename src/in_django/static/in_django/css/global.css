@@ -1,38 +1,41 @@
 /****************************** Themes start *********************************/
+
+/* fondo#D9D4CC primary#736662 # */
 :root,
 body.light {
-  --primary: #6750A4;
+  --primary: #736662;
   --on-primary: #FFFFFF;
   --primary-container: #EADDFF;
-  --on-primary-container: #21005E;
-  --secondary: #625B71;
+  --on-primary-container: #3D9DB8;
+  --secondary: #b7a4c6;
   --on-secondary: #FFFFFF;
   --secondary-container: #E8DEF8;
-  --on-secondary-container: #1E192B;
-  --tertiary: #7D5260;
+  --on-secondary-container: #476491;
+  --tertiary: #385FD3;
   --on-tertiary: #FFFFFF;
   --tertiary-container: #FFD8E4;
-  --on-tertiary-container: #370B1E;
+  --on-tertiary-container: #203982;
   --error: #B3261E;
   --on-error: #FFFFFF;
   --error-container: #F9DEDC;
   --on-error-container: #370B1E;
-  --background: #FFFBFE;
-  --on-background: #1C1B1F;
-  --surface: #FFFBFE;
-  --on-surface: #1C1B1F;
-  --surface-variant: #E7E0EC;
+  --body: #F5F5DC;
+  --background: #F5F5DC;
+  --on-background: #b7a4c6;
+  --surface: #F1F7F2;
+  --on-surface: #b7a4c6;
+  --surface-variant: #D5CDDA;
   --on-surface-variant: #49454E;
   --inverse-surface: #313033;
   --inverse-on-surface: #F4EFF4;
   --outline: #79747E;
-  --active: rgba(0,0,0,.1);
-  --overlay: rgba(0,0,0,.5);
+  --active: rgba(0, 0, 0, .1);
+  --overlay: rgba(0, 0, 0, .5);
   --elevate1: 0 2rem 2rem 0 rgba(0, 0, 0, .14), 0 1rem 5rem 0 rgba(0, 0, 0, .12), 0 3rem 1rem -2rem rgba(0, 0, 0, .2);
   --elevate2: 0 6rem 10rem 0 rgba(0, 0, 0, .14), 0 1rem 18rem 0 rgba(0, 0, 0, .12), 0 3rem 5rem -1rem rgba(0, 0, 0, .3);
   --elevate3: 0 10rem 16rem 0 rgba(0, 0, 0, .14), 0 1rem 31rem 0 rgba(0, 0, 0, .12), 0 3rem 9rem 0rem rgba(0, 0, 0, .4);
   --size: 16px;
-  --font: "Roboto Flex", "Roboto", sans-serif , system-ui, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial";
+  --font: "Roboto Flex", "Roboto", sans-serif, system-ui, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial";
   --speed1: .1s;
   --speed2: .2s;
   --speed3: .3s;
@@ -65,16 +68,37 @@ body.dark {
   --inverse-surface: #E6E1E5;
   --inverse-on-surface: #313033;
   --outline: #938F99;
-  --active: rgba(255,255,255,.2);
-  --overlay: rgba(0,0,0,.5);
+  --active: rgba(255, 255, 255, .2);
+  --overlay: rgba(0, 0, 0, .5);
   --elevate1: 0 2rem 2rem 0 rgba(0, 0, 0, .14), 0 1rem 5rem 0 rgba(0, 0, 0, .12), 0 3rem 1rem -2rem rgba(0, 0, 0, .2);
   --elevate2: 0 6rem 10rem 0 rgba(0, 0, 0, .14), 0 1rem 18rem 0 rgba(0, 0, 0, .12), 0 3rem 5rem -1rem rgba(0, 0, 0, .3);
   --elevate3: 0 10rem 16rem 0 rgba(0, 0, 0, .14), 0 1rem 31rem 0 rgba(0, 0, 0, .12), 0 3rem 9rem 0rem rgba(0, 0, 0, .4);
   --size: 16px;
-  --font: "Roboto Flex", "Roboto", sans-serif , system-ui, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial";
+  --font: "Roboto Flex", "Roboto", sans-serif, system-ui, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial";
   --speed1: .1s;
   --speed2: .2s;
   --speed3: .3s;
   --speed4: .4s;
 }
+
 /****************************** Themes end *********************************/
+
+/******************* Beer css overrides start ***********************/
+nav.top-align>a:not(button, .button, .chip):hover>i,
+nav.top-align>a:not(button, .button, .chip):focus>i,
+nav.top-align>a:not(button, .button, .chip).active>i {
+  background-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+  padding: 0.25rem 1rem;
+  font-variation-settings: "FILL" 1;
+  padding: 0.25rem;
+  border-radius: 2rem;
+  transition: var(--speed1) padding linear;
+  margin: 0 auto;
+}
+
+.top-align {
+  align-items: inherit !important;
+}
+
+/******************* Beer css overrides end ***********************/
