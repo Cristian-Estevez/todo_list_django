@@ -1,71 +1,71 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.css" rel="stylesheet">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.5/dist/cdn/material-dynamic-colors.min.js"></script>
-    
-    <script>
-      function toggleTheme() {
-        let currentTheme = document.getElementById('body').classList[0];
-        if (currentTheme == "light") {
-          document.getElementById('body').classList.remove('light');
-          document.getElementById('body').classList.add('dark');
-        } else {
-          document.getElementById('body').classList.remove('dark');
-          document.getElementById('body').classList.add('light');
-        }
-      }
-    </script>
-    
-    <title>Todo List</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google" content="notranslate">
+  <title>Your List</title>
+  <link href="https://cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static '/in_django/css/global.css' %}">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.js"></script>
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.5/dist/cdn/material-dynamic-colors.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+    integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+
+  <script src="{% static 'main/main.js' %}"></script>
+
+  <title>Todo List</title>
 </head>
-<body class="light"  id="body">
-    <nav class="left m l">
-        <img src="https://www.beercss.com/favicon.png" class="circle margin">
-        <button onclick="toggleTheme()">Theme</button>
-        <a>
-          <i>search</i>
-          <i>home</i>
-          <div>Home</div>
+
+<body class="light" id="body">
+  <div class="space"></div>
+
+  <div style="margin: auto; max-width: 80%;" class="round">
+    <nav class="top-align center filled top-round highlight-color">
+      <img src="https://www.beercss.com/favicon.png" class="circle margin">
+      <div class="right">
+        <a onclick="toggleTheme()">
+          <i id="theme-toggler-icon">dark_mode</i>
+          <div id="theme-toggler-text">Dark mode</div>
         </a>
+
         <a>
-          <i>search</i>
-          <div>Search</div>
+          <i>login</i>
+          <div>login</div>
         </a>
-        <a>
-          <i>share</i>
-          <div>Share</div>
-        </a>
-        <a>
-          <i>more_vert</i>
-          <div>More</div>
-        </a>
-      </nav>
-      
-      <nav class="bottom s">
-        <a>
-          <i>home</i>
-        </a>
-        <a>
-          <i>search</i>
-        </a>
-        <a>
-          <i>share</i>
-        </a>
-        <a>
-          <i>more_vert</i>
-        </a>
-      </nav>
-      
-      <main class="responsive">
-        <img src="https://www.beercss.com/beer-and-woman.jpg" class="responsive round">
-        <h3>Welcome</h3>
-        <h5>The beer is ready!</h5>
-      </main>
+      </div>
+    </nav>
+    <main class="bottom-round surface-variant">
+      <a data-ui="#page1">Open page 1</a>
+      <a data-ui="#page2">Open page 2</a>
+      <div class="page active" id="page1">
+        <h5 class="">Testting A</h5>
+      </div>
+      <div class="right-align page" id="page2">
+        <h5>testing 3</h5>
+      </div>
+      <div class="grid">
+        <div class="s12 m6 l3">
+          <h5>First</h5>
+        </div>
+        <div class="s12 m6 l3">
+          <h5>Second</h5>
+        </div>
+        <div class="s12 m6 l3">
+          <h5>Third</h5>
+        </div>
+      </div>
+      <button class="cta-button">
+        Botón 1
+      </button>
+      <button class="cta-button">
+        <i>home</i>
+        <button>botón 2</button>
+      </button>
+    </main>
+  </div>
 </body>
-</html>
