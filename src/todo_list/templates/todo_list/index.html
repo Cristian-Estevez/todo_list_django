@@ -7,24 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google" content="notranslate">
-  <title>Your List</title>
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="{% static '/in_django/css/global.css' %}">
   <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
     integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
   <script src="{% static 'main/main.js' %}"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <title>Todo List</title>
 </head>
 
 <body class="light" id="body">
+  <div class="space"></div>
 
   <div class="list-container">
     <nav>
-      <i class="material-symbols-outlined nav-icon" id="theme-toggler-icon" onclick="toggleTheme()">dark_mode</i>
-      <i class="material-symbols-outlined nav-icon">login</i>
+      <i class="nav-icon material-symbols-outlined" onclick="toggleTheme()">dark_mode</i>
+      <div id="theme-toggler-text">Dark mode</div>
+
+      <i class="nav-icon material-symbols-outlined">login</i>
+      <div>login</div>
     </nav>
     <main class="bottom-round surface-variant">
       <a data-ui="#page1">Open page 1</a>
