@@ -23,39 +23,25 @@
 
   <div class="list-container">
     <nav>
-      <i class="nav-icon material-symbols-outlined" onclick="toggleTheme()">dark_mode</i>
-      <div id="theme-toggler-text">Dark mode</div>
-
-      <i class="nav-icon material-symbols-outlined">login</i>
-      <div>login</div>
+      <span class="nav-left-column">
+        <i class="nav-icon material-symbols-outlined" id="theme-toggler-icon" title="Dark mode"
+          onclick="toggleTheme()">dark_mode</i>
+      </span>
+      <span class="nav-right-column">
+        <i class="nav-icon material-symbols-outlined" title="Add folder">create_new_folder</i>
+        <i class="nav-icon material-symbols-outlined" title="Add Task">post_add</i>
+        <i class="nav-icon material-symbols-outlined" title="Log in">login</i>
+      </span>
     </nav>
-    <main class="bottom-round surface-variant">
-      <a data-ui="#page1">Open page 1</a>
-      <a data-ui="#page2">Open page 2</a>
-      <div class="page active" id="page1">
-        <h5 class="">Testting A</h5>
+    <section>
+      <div>
+        <p>
+          <i class="checkbox-blank list-icon material-symbols-outlined">check_box_outline_blank</i>
+          Lavar la ropa
+          <i class="list-icon material-symbols-outlined">edit</i>
+          <i class="list-icon material-symbols-outlined">delete</i>
+        </p>
       </div>
-      <div class="right-align page" id="page2">
-        <h5>testing 3</h5>
-      </div>
-      <div class="grid">
-        <div class="s12 m6 l3">
-          <h5>First</h5>
-        </div>
-        <div class="s12 m6 l3">
-          <h5>Second</h5>
-        </div>
-        <div class="s12 m6 l3">
-          <h5>Third</h5>
-        </div>
-      </div>
-      <button class="cta-button">
-        Botón 1
-      </button>
-      <button class="cta-button">
-        <i>home</i>
-        <button>botón 2</button>
-      </button>
-    </main>
+    </section>
   </div>
 </body>

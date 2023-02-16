@@ -136,7 +136,7 @@ body.dark {
   --error-container: #6C2E2B;
   --on-error-container: #F5D5D5;
   --body: #2B2E2F;
-  --background: #2B2E2F;
+  --background: #2b3c40;
   --on-background: #5DA5A5;
   --surface: #3B3E40;
   --on-surface: #5DA5A5;
@@ -165,7 +165,12 @@ body.dark {
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
-    'opsz' 48
+    'opsz' 48;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+  border-radius: 16px;
 }
 
 body {
@@ -192,17 +197,20 @@ nav {
   background-color: var(--primary);
   color: var(--on-primary);
   border-radius: 16px 16px 0 0;
-  justify-content: end;
+  justify-content: space-between;
 }
 
-.nav-icon {
-  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
-  cursor: pointer;
-  margin: 0.5rem;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+.nav-right-column {
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-icon:hover {
   background-color: var(--on-primary-container);
-  border-radius: 16px;
+  color: var(--surface)
+}
+
+.list-icon:hover {
+  background-color: var(--on-background);
+  color: var(--on-surface-variant)
 }
