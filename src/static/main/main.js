@@ -1,6 +1,13 @@
 $(document).ready(function () {
   $('.checkbox-blank').on('click', function (event) {
-    $(event.target).html = 'check_box'  aca revisar funcion
+    let iconText = event.target.innerHTML;
+    if (iconText === 'check_box_outline_blank') {
+      event.target.innerHTML = 'check_box';
+      event.target.classList.add('task-done')
+    } else {
+      event.target.innerHTML = 'check_box_outline_blank';
+      event.target.classList.remove('task-done')
+    }
   })
 })
 

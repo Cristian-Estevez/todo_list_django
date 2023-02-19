@@ -70,6 +70,7 @@ body.light {
   --on-error: #FFFFFF;
   --error-container: #F5D5D5;
   --on-error-container: #6C2E2B;
+  --success: #ff3a3a;
   --body: #1dc2ca;
   --background: #E5F5F6;
   --on-background: #5DA5A5;
@@ -135,6 +136,7 @@ body.dark {
   --on-error: #FFFFFF;
   --error-container: #6C2E2B;
   --on-error-container: #F5D5D5;
+  --success: #ff3a3a;
   --body: #2B2E2F;
   --background: #2b3c40;
   --on-background: #5DA5A5;
@@ -213,4 +215,15 @@ nav {
 .list-icon:hover {
   background-color: var(--on-background);
   color: var(--on-surface-variant)
+}
+
+.folder,
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.task-done {
+  color: var(--success);
 }
