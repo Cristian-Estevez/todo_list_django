@@ -66,6 +66,8 @@ body.light {
   --on-tertiary: #FFFFFF;
   --tertiary-container: #D4F4F4;
   --on-tertiary-container: #2B5F5D;
+  --quaternary: #a7f3f3;
+  --on-quaternary-container: #b3fbed;
   --error: #CB8581;
   --on-error: #FFFFFF;
   --error-container: #F5D5D5;
@@ -132,11 +134,13 @@ body.dark {
   --on-tertiary: #FFFFFF;
   --tertiary-container: #2B5F5D;
   --on-tertiary-container: #D4F4F4;
+  --quaternary: #3c4c49;
+  --on-quaternary-container: #546864;
   --error: #CB8581;
   --on-error: #FFFFFF;
   --error-container: #6C2E2B;
   --on-error-container: #F5D5D5;
-  --success: #ff3a3a;
+  --success: #eb9f15;
   --body: #2B2E2F;
   --background: #2b3c40;
   --on-background: #5DA5A5;
@@ -183,9 +187,13 @@ body {
   font-family: var(--font);
 }
 
+.display-none {
+  display: none !important;
+}
+
 .list-container {
   width: 80%;
-  margin: auto;
+  margin: 50px auto auto auto;
   border-radius: 16px;
   display: flex;
   color: var(--on-background);
@@ -214,16 +222,59 @@ nav {
 
 .list-icon:hover {
   background-color: var(--on-background);
-  color: var(--on-surface-variant)
+  color: var(--background)
 }
 
-.folder,
+.folder {
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.folder-container,
 .task {
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .task-done {
   color: var(--success);
+}
+
+.featured-icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions-container {
+  font-size: 0;
+}
+
+.folder-tasks-container {
+  width: 95%;
+  margin-left: auto;
+  background-color: var(--quaternary);
+  margin-bottom: .75rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 12px 12px;
+}
+
+.in-folder-task:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.in-folder-task:nth-child(even) {
+  background-color: var(--on-quaternary-container);
+}
+
+.item:nth-child(even) {
+  background-color: var(--primary-container);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
 }

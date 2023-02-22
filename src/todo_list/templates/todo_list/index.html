@@ -15,7 +15,7 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <title>Todo List</title>
+  <title>Your List</title>
 </head>
 
 <body class="light" id="body">
@@ -34,20 +34,63 @@
       </span>
     </nav>
     <section>
-      <div>
-        <div class="folder">
-          <i class="list-icon material-symbols-outlined">folder</i>
-          <p>Hogar</p>
-          <i class="list-icon material-symbols-outlined">edit</i>
-          <i class="list-icon material-symbols-outlined">delete</i>
-
+      <div class="folder item">
+        <div class="folder-container">
+          <span class="featured-icon-container">
+            <i class="list-icon material-symbols-outlined folder">folder</i>
+            <p>Hogar</p>
+          </span>
+          <span class="actions-container">
+            <i class="list-icon material-symbols-outlined">edit</i>
+            <i class="list-icon material-symbols-outlined">delete</i>
+          </span>
         </div>
-        <div class="task">
-          <i class="checkbox-blank list-icon material-symbols-outlined">check_box_outline_blank</i>
+        <div class="folder-tasks-container display-none">
+          <div class="task in-folder-task">
+            <span class="featured-icon-container">
+              <i class="list-icon material-symbols-outlined file">description</i>
+              <p>Lavar la ropa</p>
+            </span>
+            <span class="actions-container">
+              <i class="checkbox-blank list-icon material-symbols-outlined">check_box_outline_blank</i>
+              <i class="list-icon material-symbols-outlined">edit</i>
+              <i class="list-icon material-symbols-outlined">delete</i>
+            </span>
+          </div>
+          <div class="task in-folder-task">
+            <span class="featured-icon-container">
+              <i class="list-icon material-symbols-outlined file">description</i>
+              <p>Pasear al perro</p>
+            </span>
+            <span class="actions-container">
+              <i class="checkbox-blank list-icon material-symbols-outlined">check_box_outline_blank</i>
+              <i class="list-icon material-symbols-outlined">edit</i>
+              <i class="list-icon material-symbols-outlined">delete</i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="task item">
+        <span class="featured-icon-container">
+          <i class="list-icon material-symbols-outlined file">description</i>
           <p>Lavar la ropa</p>
+        </span>
+        <span class="actions-container">
+          <i class="checkbox-blank list-icon material-symbols-outlined">check_box_outline_blank</i>
           <i class="list-icon material-symbols-outlined">edit</i>
           <i class="list-icon material-symbols-outlined">delete</i>
-        </div>
+        </span>
+      </div>
+      <div class="task item">
+        <span class="featured-icon-container">
+          <i class="list-icon material-symbols-outlined file">description</i>
+          <p>Pasear al perro</p>
+        </span>
+        <span class="actions-container">
+          <i class="checkbox-blank list-icon material-symbols-outlined">check_box_outline_blank</i>
+          <i class="list-icon material-symbols-outlined">edit</i>
+          <i class="list-icon material-symbols-outlined">delete</i>
+        </span>
       </div>
     </section>
   </div>
