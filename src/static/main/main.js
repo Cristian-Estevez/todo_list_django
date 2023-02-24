@@ -15,8 +15,10 @@ $(document).ready(function () {
   // hover effects
   $('.folder').hover(function (event) {
     $(event.currentTarget).find(".folder-container").css('background-color', 'rgb(0, 0, 0, .15)');
+    $(event.currentTarget).find(".folder-container").css('border-radius', '0 0 16px 16px');
   }, function (event) {
     $(event.currentTarget).find(".folder-container").css('background-color', '');
+    $(event.currentTarget).find(".folder-container").css('border-radius', '');
   });
 
   $('.folder').on('click', function () {

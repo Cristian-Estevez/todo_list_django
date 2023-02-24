@@ -274,6 +274,11 @@ nav {
   background-color: var(--primary-container);
 }
 
+.item:last-child,
+.folder-container:last-child {
+  border-radius: 0 0 16px 16px;
+}
+
 section {
   display: flex;
   flex-direction: column;
