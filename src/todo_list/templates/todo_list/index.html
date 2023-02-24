@@ -7,65 +7,80 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google" content="notranslate">
-  <title>Your List</title>
-  <link href="https://cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="{% static '/in_django/css/global.css' %}">
-  <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.0.8/dist/cdn/beer.min.js"></script>
-  <script type="module"
-    src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.5/dist/cdn/material-dynamic-colors.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
     integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
-
   <script src="{% static 'main/main.js' %}"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <title>Todo List</title>
+  <title>Your List</title>
 </head>
 
 <body class="light" id="body">
-  <div class="space"></div>
+  <div class="list-container">
 
-  <div style="margin: auto; max-width: 80%;" class="round">
-    <nav class="top-align center filled top-round highlight-color">
-      <img src="https://www.beercss.com/favicon.png" class="circle margin">
-      <div class="right">
-        <a onclick="toggleTheme()">
-          <i id="theme-toggler-icon">dark_mode</i>
-          <div id="theme-toggler-text">Dark mode</div>
-        </a>
-
-        <a>
-          <i>login</i>
-          <div>login</div>
-        </a>
-      </div>
+    <nav>
+      <span class="nav-left-column">
+        <i class="nav-icon material-symbols-outlined" id="theme-toggler-icon" title="Dark mode"
+          onclick="toggleTheme()">dark_mode</i>
+      </span>
+      <span class="nav-right-column">
+        <i class="nav-icon material-symbols-outlined" title="Add folder">create_new_folder</i>
+        <i class="nav-icon material-symbols-outlined" title="Add Task">post_add</i>
+        <i class="nav-icon material-symbols-outlined" title="Log in">login</i>
+      </span>
     </nav>
-    <main class="bottom-round surface-variant">
-      <a data-ui="#page1">Open page 1</a>
-      <a data-ui="#page2">Open page 2</a>
-      <div class="page active" id="page1">
-        <h5 class="">Testting A</h5>
-      </div>
-      <div class="right-align page" id="page2">
-        <h5>testing 3</h5>
-      </div>
-      <div class="grid">
-        <div class="s12 m6 l3">
-          <h5>First</h5>
+
+    <section>
+      {% for folder in folders %}
+        <div class="folder item">
+          <div class="folder-container">
+            <span class="featured-icon-container">
+              <i class="list-icon material-symbols-outlined folder">folder</i>
+              <p>{{folder.title}}</p>
+            </span>
+            <span class="actions-container">
+              <i class="list-icon material-symbols-outlined" title="Add Task">post_add</i>
+              <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
+              <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
+            </span>
+          </div>
+            <div class="folder-tasks-container display-none">
+              {% for task in in_folder_tasks %}
+                {% if task.folder_id == folder %}
+                  <div class="task in-folder-task">
+                    <span class="featured-icon-container">
+                      <i class="list-icon material-symbols-outlined file">description</i>
+                      <p>{{task.title}}</p>
+                    </span>
+                    <span class="actions-container">
+                      <i class="checkbox-blank list-icon material-symbols-outlined"
+                        title="Mark Done">check_box_outline_blank</i>
+                      <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
+                      <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
+                    </span>
+                  </div>
+                {% endif %}
+              {% endfor %}          
+            </div>
         </div>
-        <div class="s12 m6 l3">
-          <h5>Second</h5>
+      {% endfor %}
+
+      {% for lonely_task in lonely_tasks %}
+        <div class="task item">
+          <span class="featured-icon-container">
+            <i class="list-icon material-symbols-outlined file">description</i>
+            <p>{{lonely_task.title}}</p>
+          </span>
+          <span class="actions-container">
+            <i class="checkbox-blank list-icon material-symbols-outlined" title="Mark Done">check_box_outline_blank</i>
+            <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
+            <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
+          </span>
         </div>
-        <div class="s12 m6 l3">
-          <h5>Third</h5>
-        </div>
-      </div>
-      <button class="cta-button">
-        Botón 1
-      </button>
-      <button class="cta-button">
-        <i>home</i>
-        <button>botón 2</button>
-      </button>
-    </main>
+      {% endfor %}
+    </section>
   </div>
 </body>

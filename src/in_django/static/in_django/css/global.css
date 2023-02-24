@@ -1,9 +1,8 @@
 /****************************** Themes start *********************************/
 
-/* fondo#D9D4CC primary#736662 # */
 :root,
 body.light {
-  --primary: #736662;
+  /* --primary: #736662;
   --on-primary: #FFFFFF;
   --primary-container: #EADDFF;
   --on-primary-container: #3D9DB8;
@@ -20,15 +19,70 @@ body.light {
   --error-container: #F9DEDC;
   --on-error-container: #370B1E;
   --body: #F5F5DC;
-  --background: #F5F5DC;
-  --on-background: #b7a4c6;
+  --background: #D9D4CC;
+  --on-background: #464547;
   --surface: #F1F7F2;
   --on-surface: #b7a4c6;
   --surface-variant: #D5CDDA;
   --on-surface-variant: #49454E;
   --inverse-surface: #313033;
   --inverse-on-surface: #F4EFF4;
-  --outline: #79747E;
+  --outline: #79747E; */
+  /* --primary: #8a5d5d;
+  --on-primary: #FFFFFF;
+  --primary-container: #EFE6ED;
+  --on-primary-container: #686D7E;
+  --secondary: #7e94b8;
+  --on-secondary: #FFFFFF;
+  --secondary-container: #E8EAF6;
+  --on-secondary-container: #464D77;
+  --tertiary: #6d8a5d;
+  --on-tertiary: #FFFFFF;
+  --tertiary-container: #F6E2E2;
+  --on-tertiary-container: #7B473F;
+  --error: #b34643;
+  --on-error: #FFFFFF;
+  --error-container: #F8E5E5;
+  --on-error-container: #632B2A;
+  --body: #F5F5DC;
+  --background: #F5F5DC;
+  --on-background: #7e94b8;
+  --surface: #F1F7F2;
+  --on-surface: #7e94b8;
+  --surface-variant: #D5CDDA;
+  --on-surface-variant: #49454E;
+  --inverse-surface: #313033;
+  --inverse-on-surface: #F4EFF4;
+  --outline: #79747E; */
+  --primary: #78B4B4;
+  --on-primary: #FFFFFF;
+  --primary-container: #D6F0F0;
+  --on-primary-container: #2B5F5D;
+  --secondary: #5DA5A5;
+  --on-secondary: #FFFFFF;
+  --secondary-container: #E3F5F5;
+  --on-secondary-container: #2B5F5D;
+  --tertiary: #60B3A3;
+  --on-tertiary: #FFFFFF;
+  --tertiary-container: #D4F4F4;
+  --on-tertiary-container: #2B5F5D;
+  --quaternary: #a7f3f3;
+  --on-quaternary-container: #b3fbed;
+  --error: #CB8581;
+  --on-error: #FFFFFF;
+  --error-container: #F5D5D5;
+  --on-error-container: #6C2E2B;
+  --success: #ff3a3a;
+  --body: #1dc2ca;
+  --background: #E5F5F6;
+  --on-background: #5DA5A5;
+  --surface: #F6FCFC;
+  --on-surface: #5DA5A5;
+  --surface-variant: #D5E5E5;
+  --on-surface-variant: #4B7E7D;
+  --inverse-surface: #4B7E7D;
+  --inverse-on-surface: #F6FCFC;
+  --outline: #6E9696;
   --active: rgba(0, 0, 0, .1);
   --overlay: rgba(0, 0, 0, .5);
   --elevate1: 0 2rem 2rem 0 rgba(0, 0, 0, .14), 0 1rem 5rem 0 rgba(0, 0, 0, .12), 0 3rem 1rem -2rem rgba(0, 0, 0, .2);
@@ -43,7 +97,7 @@ body.light {
 }
 
 body.dark {
-  --primary: #D0BCFF;
+  /* --primary: #D0BCFF;
   --on-primary: #371E73;
   --primary-container: #4F378B;
   --on-primary-container: #EADDFF;
@@ -67,7 +121,36 @@ body.dark {
   --on-surface-variant: #CAC4D0;
   --inverse-surface: #E6E1E5;
   --inverse-on-surface: #313033;
-  --outline: #938F99;
+  --outline: #938F99; */
+  --primary: #78B4B4;
+  --on-primary: #FFFFFF;
+  --primary-container: #2B5F5D;
+  --on-primary-container: #D6F0F0;
+  --secondary: #5DA5A5;
+  --on-secondary: #FFFFFF;
+  --secondary-container: #2B5F5D;
+  --on-secondary-container: #E3F5F5;
+  --tertiary: #60B3A3;
+  --on-tertiary: #FFFFFF;
+  --tertiary-container: #2B5F5D;
+  --on-tertiary-container: #D4F4F4;
+  --quaternary: #3c4c49;
+  --on-quaternary-container: #546864;
+  --error: #CB8581;
+  --on-error: #FFFFFF;
+  --error-container: #6C2E2B;
+  --on-error-container: #F5D5D5;
+  --success: #eb9f15;
+  --body: #2B2E2F;
+  --background: #2b3c40;
+  --on-background: #5DA5A5;
+  --surface: #3B3E40;
+  --on-surface: #5DA5A5;
+  --surface-variant: #4B4F51;
+  --on-surface-variant: #D5E5E5;
+  --inverse-surface: #D5E5E5;
+  --inverse-on-surface: #4B4F51;
+  --outline: #5A5C5E;
   --active: rgba(255, 255, 255, .2);
   --overlay: rgba(0, 0, 0, .5);
   --elevate1: 0 2rem 2rem 0 rgba(0, 0, 0, .14), 0 1rem 5rem 0 rgba(0, 0, 0, .12), 0 3rem 1rem -2rem rgba(0, 0, 0, .2);
@@ -83,22 +166,120 @@ body.dark {
 
 /****************************** Themes end *********************************/
 
-/******************* Beer css overrides start ***********************/
-nav.top-align>a:not(button, .button, .chip):hover>i,
-nav.top-align>a:not(button, .button, .chip):focus>i,
-nav.top-align>a:not(button, .button, .chip).active>i {
-  background-color: var(--secondary-container);
-  color: var(--on-secondary-container);
-  padding: 0.25rem 1rem;
-  font-variation-settings: "FILL" 1;
-  padding: 0.25rem;
-  border-radius: 2rem;
-  transition: var(--speed1) padding linear;
-  margin: 0 auto;
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) .3s;
+  border-radius: 16px;
 }
 
-.top-align {
-  align-items: inherit !important;
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--body);
+  display: flex;
+  font-family: var(--font);
 }
 
-/******************* Beer css overrides end ***********************/
+.display-none {
+  display: none !important;
+}
+
+.list-container {
+  width: 80%;
+  margin: 50px auto auto auto;
+  border-radius: 16px;
+  display: flex;
+  color: var(--on-background);
+  background-color: var(--background);
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border-radius: 16px 16px 0 0;
+  justify-content: space-between;
+}
+
+.nav-right-column {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-icon:hover {
+  background-color: var(--on-primary-container);
+  color: var(--surface)
+}
+
+.list-icon:hover {
+  background-color: var(--on-background);
+  color: var(--background)
+}
+
+.folder {
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.folder-container,
+.task {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-done {
+  color: var(--success);
+}
+
+.featured-icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions-container {
+  font-size: 0;
+}
+
+.folder-tasks-container {
+  width: 95%;
+  margin-left: auto;
+  background-color: var(--quaternary);
+  margin-bottom: .75rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 12px 12px;
+}
+
+.in-folder-task:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.in-folder-task:nth-child(even) {
+  background-color: var(--on-quaternary-container);
+}
+
+.item:nth-child(even) {
+  background-color: var(--primary-container);
+}
+
+.item:last-child,
+.folder-container:last-child {
+  border-radius: 0 0 16px 16px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
