@@ -38,7 +38,22 @@ $(document).ready(function () {
   }, function (event) {
     $(event.currentTarget).css('background-color', '');
   });
+
+  /**
+   * login
+  */
+  $('#login-icon, #login-close').on('click', toggleLoginModal);
 })
+
+function toggleLoginModal() {
+  toggleBackdrop();
+  $('.login-section').toggleClass('flex');
+}
+
+function toggleBackdrop() {
+  $('#backdrop').toggle();
+  $('#backdrop').click(toggleBackdrop);
+}
 
 function toggleTheme() {
   let currentTheme = document.getElementById('body').classList[0];

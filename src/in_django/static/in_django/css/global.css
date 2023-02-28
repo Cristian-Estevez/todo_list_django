@@ -185,12 +185,14 @@ body {
   background-color: var(--body);
   display: flex;
   font-family: var(--font);
+  margin: 0;
 }
 
 .display-none {
   display: none !important;
 }
 
+.login-inner,
 .list-container {
   width: 80%;
   margin: 50px auto auto auto;
@@ -201,6 +203,7 @@ body {
   flex-direction: column;
 }
 
+.login-nav,
 nav {
   display: flex;
   flex-direction: row;
@@ -208,6 +211,7 @@ nav {
   color: var(--on-primary);
   border-radius: 16px 16px 0 0;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-right-column {
@@ -282,4 +286,36 @@ nav {
 section {
   display: flex;
   flex-direction: column;
+}
+
+.login-section {
+  position: absolute;
+  z-index: 4;
+  display: none;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.login-inner {
+  box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: none;
+  margin: 0;
+  background-color: #00000050;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
