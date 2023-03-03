@@ -14,27 +14,30 @@ $(document).ready(function () {
 
   // hover effects
   $('.folder').hover(function (event) {
-    $(event.currentTarget).find(".folder-container").css('background-color', 'rgb(0, 0, 0, .15)');
+    $(event.currentTarget).find(".folder-container").css('background-color', 'rgba(0, 0, 0, .15)');
+    $(event.currentTarget).find(".folder-container").css('color', 'rgb(255, 255, 255)');
     $(event.currentTarget).find(".folder-container:last-child").css('border-radius', '0 0 16px 16px');
   }, function (event) {
     $(event.currentTarget).find(".folder-container").css('background-color', '');
+    $(event.currentTarget).find(".folder-container").css('color', '');
     $(event.currentTarget).find(".folder-container").css('border-radius', '');
   });
 
+  // open folder
   $('.folder').on('click', function () {
-    if ($(this).find('.folder-tasks-container').attr('class').includes('display-none')) {
-      $(this).find('.folder-tasks-container').removeClass('display-none');
+    if (!$(this).find('.folder-tasks-container').attr('class').includes('max-height-40')) {
+      $(this).find('.folder-tasks-container').addClass('max-height-40 mb-3');
       $(this).css('background-color', 'rgb(0, 0, 0, .15)');
       $(this).find(".folder-container .featured-icon-container .list-icon").text('folder_open');
     } else {
-      $(this).find('.folder-tasks-container').addClass('display-none')
+      $(this).find('.folder-tasks-container').removeClass('max-height-40 mb-3');
       $(this).css('background-color', '')
       $(this).find(".folder-container .featured-icon-container .list-icon").text('folder');
     };
   });
 
   $('.task').hover(function (event) {
-    $(event.currentTarget).css('background-color', 'rgb(0, 0, 0, .15)');
+    $(event.currentTarget).css('background-color', 'rgba(0, 0, 0, .15)');
   }, function (event) {
     $(event.currentTarget).css('background-color', '');
   });
@@ -43,7 +46,14 @@ $(document).ready(function () {
    * login
   */
   $('#login-icon, #login-close').on('click', toggleLoginModal);
+
+  $('.task').on('click', showDescription);
 })
+
+function showDescription(event) {
+  event.stopPropagation();
+  $(this).toggleClass('max-height-40');
+}
 
 function toggleLoginModal() {
   toggleBackdrop();

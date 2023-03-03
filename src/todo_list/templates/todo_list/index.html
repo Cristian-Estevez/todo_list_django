@@ -46,20 +46,26 @@
             <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
           </span>
         </div>
-        <div class="folder-tasks-container display-none">
+        <div class="folder-tasks-container">
           {% for task in in_folder_tasks %}
           {% if task.folder_id == folder %}
           <div class="task in-folder-task">
-            <span class="featured-icon-container">
-              <i class="list-icon material-symbols-outlined file">description</i>
-              <p>{{task.title}}</p>
-            </span>
-            <span class="actions-container">
-              <i class="checkbox-blank list-icon material-symbols-outlined"
-                title="Mark Done">check_box_outline_blank</i>
-              <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
-              <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
-            </span>
+            <input type="hidden" name="task-id" id="task_id={{ task.id }}">
+            <div class="w-full flex justify-between">
+              <span class="featured-icon-container">
+                <i class="list-icon material-symbols-outlined file">description</i>
+                <p>{{ task.title }}</p>
+              </span>
+              <span class="actions-container">
+                <i class="checkbox-blank list-icon material-symbols-outlined"
+                  title="Mark Done">check_box_outline_blank</i>
+                <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
+                <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
+              </span>
+            </div>
+            <div class="description">
+              {{task.description}}
+            </div>
           </div>
           {% endif %}
           {% endfor %}
@@ -69,15 +75,21 @@
 
       {% for lonely_task in lonely_tasks %}
       <div class="task item">
-        <span class="featured-icon-container">
-          <i class="list-icon material-symbols-outlined file">description</i>
-          <p>{{lonely_task.title}}</p>
-        </span>
-        <span class="actions-container">
-          <i class="checkbox-blank list-icon material-symbols-outlined" title="Mark Done">check_box_outline_blank</i>
-          <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
-          <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
-        </span>
+        <input type="hidden" name="task-id" id="task_id={{ task.id }}" value="{{task.description}}">
+        <div class="w-full flex justify-between">
+          <span class="featured-icon-container">
+            <i class="list-icon material-symbols-outlined file">description</i>
+            <p>{{lonely_task.title}}</p>
+          </span>
+          <span class="actions-container">
+            <i class="checkbox-blank list-icon material-symbols-outlined" title="Mark Done">check_box_outline_blank</i>
+            <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
+            <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
+          </span>
+        </div>
+        <div class="description">
+          {{lonely_task.description}}
+        </div>
       </div>
       {% endfor %}
     </section>
