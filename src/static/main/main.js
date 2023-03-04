@@ -52,6 +52,9 @@ $(document).ready(function () {
 
 function showDescription(event) {
   event.stopPropagation();
+  Array.from($(this).parent().find('.task')).forEach(task => {
+    task.classList.remove('max-height-40');
+  });
   $(this).toggleClass('max-height-40');
 }
 

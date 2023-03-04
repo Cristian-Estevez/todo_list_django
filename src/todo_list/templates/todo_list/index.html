@@ -88,7 +88,11 @@
           </span>
         </div>
         <div class="description">
-          {{lonely_task.description}}
+          {% if lonely_task.description == None %}
+            Sin descripción
+          {% else %}
+            {{lonely_task.description}}
+          {% endif %}
         </div>
       </div>
       {% endfor %}
