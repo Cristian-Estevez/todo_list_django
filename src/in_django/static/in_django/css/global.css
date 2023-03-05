@@ -164,6 +164,11 @@ body.dark {
   --speed4: .4s;
 }
 
+a {
+  text-decoration: none;
+  flex-column color: inherit;
+}
+
 /****************************** Themes end *********************************/
 
 .material-symbols-outlined {
@@ -292,19 +297,17 @@ section {
 .login-section {
   position: absolute;
   z-index: 4;
-  display: none;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: #00000050;
-}
-
-.login-inner {
-  box-shadow: var(--on-tertiary-container) 0px 8px 16px 13px;
 }
 
 .flex {
   display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .opacity-1 {
@@ -323,4 +326,8 @@ section {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.checkbox:checked:before {
+  background-color: green;
 }

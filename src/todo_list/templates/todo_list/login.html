@@ -1,0 +1,39 @@
+{% extends "todo_list/index.html" %}
+
+{% block content %}
+<section class="login-section">
+    <div class="login-inner">
+        <div class="login-nav">
+            <span class="nav-left-column pl-4">
+                Please login
+            </span>
+            <span class="nav-right-column">
+                <a href="/">
+                    <i class="nav-icon material-symbols-outlined" title="Close" id="login-close">
+                        close
+                    </i>
+                </a>
+            </span>
+        </div>
+
+        <div class="login-form-container">
+            <form action="POST" class="flex flex-column">
+                {% csrf_token %}
+                <span>
+                    <label for="name">Username:</label>
+                    <input type="text" name="name" placeholder="Username" id="">
+                </span>
+                <span>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Password" id="">
+                </span>
+                <span>
+                    <label for="remember-me">Remember me</label>
+                    <input class="checkbox" type="checkbox" name="remember-me">
+                </span>
+            </form>
+        </div>
+
+    </div>
+</section>
+{%endblock%}

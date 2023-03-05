@@ -9,7 +9,7 @@ def mainApp(request):
     else:
         return render(
             request,
-            'todo_list/index.html',
+            'todo_list/task_list.html',
             {
                 "folders": Folder.objects.filter(deleted=False),
                 "in_folder_tasks": Task.objects.filter(deleted=False).exclude(folder_id__isnull=True),
