@@ -46,13 +46,12 @@ $(document).ready(function () {
 })
 
 function toggleLoginModal() {
-  toggleBackdrop();
+  // toggleBackdrop();
   $('.login-section').toggleClass('flex');
 }
 
 function toggleBackdrop() {
-  $('#backdrop').toggle();
-  $('#backdrop').click(toggleBackdrop);
+  // $('#backdrop').toggle();
 }
 
 function toggleTheme() {

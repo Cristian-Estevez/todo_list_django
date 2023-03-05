@@ -82,6 +82,7 @@
       {% endfor %}
     </section>
   </div>
+
   <section class="login-section">
     <div class="login-inner">
       <div class="login-nav">
@@ -95,7 +96,13 @@
         </span>
       </div>
 
+      <div class="login-form-container">
+        <form action="POST">
+          {% csrf_token %}
+          <input type="text" name="" id="">
+        </form>
+      </div>
+
     </div>
   </section>
-  <section id="backdrop" class="backdrop"></section>
 </body>
