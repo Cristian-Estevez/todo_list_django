@@ -164,6 +164,11 @@ body.dark {
   --speed4: .4s;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /****************************** Themes end *********************************/
 
 .material-symbols-outlined {
@@ -285,6 +290,7 @@ nav {
   background-color: var(--primary-container);
 }
 
+.login-form-container,
 .item:last-child,
 .folder-container:last-child {
   border-radius: 0 0 16px 16px;
@@ -308,18 +314,21 @@ section {
 .login-section {
   position: absolute;
   z-index: 4;
-  display: none;
   justify-content: center;
   width: 100vw;
   height: 100vh;
 }
 
-.login-inner {
-  box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
-}
-
 .flex {
   display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.opacity-1 {
+  opacity: 1;
 }
 
 .justify-between {
@@ -350,4 +359,8 @@ section {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.checkbox:checked:before {
+  background-color: green;
 }

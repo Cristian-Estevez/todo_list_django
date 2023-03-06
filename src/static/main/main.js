@@ -59,13 +59,7 @@ function showDescription(event) {
 }
 
 function toggleLoginModal() {
-  toggleBackdrop();
   $('.login-section').toggleClass('flex');
-}
-
-function toggleBackdrop() {
-  $('#backdrop').toggle();
-  $('#backdrop').click(toggleBackdrop);
 }
 
 function toggleTheme() {
