@@ -50,6 +50,7 @@ $(document).ready(function () {
   $('.task').on('click', showDescription);
 })
 
+
 function showDescription(event) {
   event.stopPropagation();
   Array.from($(this).parent().find('.task')).forEach(task => {
