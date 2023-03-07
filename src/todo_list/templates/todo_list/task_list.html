@@ -2,36 +2,37 @@
 
 {% block content %}
 <div class="list-container">
-    <nav>
-      <span class="nav-left-column">
-        <i class="nav-icon material-symbols-outlined" id="theme-toggler-icon" title="Dark mode"
-          onclick="toggleTheme()">dark_mode</i>
-      </span>
-      <span class="nav-right-column">
-        <i class="nav-icon material-symbols-outlined" title="Add folder">create_new_folder</i>
-        <i class="nav-icon material-symbols-outlined" title="Add Task">post_add</i>
-        <a href="/login"><i class="nav-icon material-symbols-outlined" id="login-icon" title="Log in">login</i></a>
-      </span>
-    </nav>
+  <nav>
+    <span class="nav-left-column">
+      <i class="nav-icon material-symbols-outlined" id="theme-toggler-icon" title="Dark mode"
+        onclick="toggleTheme()">dark_mode</i>
+    </span>
+    <span class="nav-right-column">
+      <i class="nav-icon material-symbols-outlined" title="Add folder">create_new_folder</i>
+      <i class="nav-icon material-symbols-outlined" title="Add Task">post_add</i>
+      <a href="/login"><i class="nav-icon material-symbols-outlined" id="login-icon" title="Log in">login</i></a>
+    </span>
+  </nav>
 
-    <section>
-      {% for folder in folders %}
-      <div class="folder item">
-        <div class="folder-container">
-          <span class="featured-icon-container">
-            <i class="list-icon material-symbols-outlined folder">folder</i>
-            <p>{{folder.title}}</p>
-          </span>
-          <span class="actions-container">
-            <i class="list-icon material-symbols-outlined" title="Add Task">post_add</i>
-            <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
-            <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
-          </span>
-        </div>
-        <div class="folder-tasks-container display-none">
-          {% for task in in_folder_tasks %}
-          {% if task.folder_id == folder %}
-          <div class="task in-folder-task">
+  <section>
+    {% for folder in folders %}
+    <div class="folder item">
+      <div class="folder-container">
+        <span class="featured-icon-container">
+          <i class="list-icon material-symbols-outlined folder">folder</i>
+          <p>{{folder.title}}</p>
+        </span>
+        <span class="actions-container">
+          <i class="list-icon material-symbols-outlined" title="Add Task">post_add</i>
+          <i class="list-icon material-symbols-outlined" title="Edit Task">edit</i>
+          <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
+        </span>
+      </div>
+      <div class="folder-tasks-container">
+        {% for task in in_folder_tasks %}
+        {% if task.folder_id == folder %}
+        <div class="task in-folder-task">
+          <div class="flex justify-between">
             <span class="featured-icon-container">
               <i class="list-icon material-symbols-outlined file">description</i>
               <p>{{task.title}}</p>
@@ -43,14 +44,21 @@
               <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
             </span>
           </div>
-          {% endif %}
-          {% endfor %}
+          <div class="flex justify-center">
+            <div class="flex justify-center description-area items-center">
+              {{task.description}}
+            </div>
+          </div>
         </div>
+        {% endif %}
+        {% endfor %}
       </div>
-      {% endfor %}
+    </div>
+    {% endfor %}
 
-      {% for lonely_task in lonely_tasks %}
-      <div class="task item">
+    {% for lonely_task in lonely_tasks %}
+    <div class="task item">
+      <div class="flex justify-between">
         <span class="featured-icon-container">
           <i class="list-icon material-symbols-outlined file">description</i>
           <p>{{lonely_task.title}}</p>
@@ -61,7 +69,14 @@
           <i class="list-icon material-symbols-outlined" title="Delete Task">delete</i>
         </span>
       </div>
-      {% endfor %}
-    </section>
-  </div>
+      <div class="flex justify-center">
+        <div class="flex justify-center description-area items-center">
+          {{lonely_task.description}}
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+  </section>
+</div>
 {%endblock%}
