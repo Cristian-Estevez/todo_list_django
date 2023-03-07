@@ -164,6 +164,11 @@ body.dark {
   --speed4: .4s;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /****************************** Themes end *********************************/
 
 .material-symbols-outlined {
@@ -234,13 +239,19 @@ nav {
   cursor: pointer;
 }
 
-.folder-container,
-.task {
+.folder-container {
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.task {
+  max-height: 3rem;
+  transition: max-height .3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .task-done {
@@ -260,10 +271,11 @@ nav {
   width: 95%;
   margin-left: auto;
   background-color: var(--quaternary);
-  margin-bottom: .75rem;
   display: flex;
   flex-direction: column;
   border-radius: 0 0 12px 12px;
+  max-height: 0;
+  transition: max-height .3s ease-in-out;
 }
 
 .in-folder-task:last-child {
@@ -284,6 +296,16 @@ nav {
   border-radius: 0 0 16px 16px;
 }
 
+.description {
+  width: 80%;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0 auto 0.5rem auto;
+  border: solid 1px;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -292,23 +314,37 @@ section {
 .login-section {
   position: absolute;
   z-index: 4;
-  display: none;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: #00000050;
-}
-
-.login-inner {
-  box-shadow: var(--on-tertiary-container) 0px 8px 16px 13px;
 }
 
 .flex {
   display: flex !important;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .opacity-1 {
   opacity: 1;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.mb-3 {
+  margin-bottom: .75rem;
+}
+
+.max-height-40 {
+  max-height: 10rem;
 }
 
 .backdrop {
@@ -323,4 +359,8 @@ section {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.checkbox:checked:before {
+  background-color: green;
 }
