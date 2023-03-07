@@ -16,20 +16,29 @@
             </span>
         </div>
 
-        <div class="login-form-container">
-            <form action="POST" class="flex flex-column">
+        <div class="login-form-container w-full">
+            <form action="POST" class="flex flex-column items-center w-full my-4">
                 {% csrf_token %}
-                <span>
-                    <label for="name">Username:</label>
-                    <input type="text" name="name" placeholder="Username" id="">
+                <span class="flex justify-between w-half py-1">
+                    <label class="items-center flex" for="name">Username:</label>
+                    <input class="h-5 items-center pl-4" type="text" name="name" placeholder="Username" id="">
                 </span>
-                <span>
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" placeholder="Password" id="">
+                <span class="flex justify-between w-half py-1">
+                    <label class="items-center flex" for="password">Password:</label>
+                    <input class="h-5 items-center pl-4" type="password" name="password" placeholder="Password"
+                        id="password">
                 </span>
-                <span>
-                    <label for="remember-me">Remember me</label>
-                    <input class="checkbox" type="checkbox" name="remember-me">
+                <span class="flex justify-between w-half py-1">
+                    <span class="flex">
+                        <label class=" items-center flex" for="remember-me">Remember me</label>
+                        <input class="checkbox ml-4" type="checkbox" name="remember-me">
+                    </span>
+                    <i class="nav-icon material-symbols-outlined visibility" title="Show password">
+                        visibility
+                    </i>
+                    <i class="nav-icon material-symbols-outlined display-none visibility" title="Show password">
+                        visibility_off
+                    </i>
                 </span>
             </form>
         </div>

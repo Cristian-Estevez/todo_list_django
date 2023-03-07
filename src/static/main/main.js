@@ -48,8 +48,24 @@ $(document).ready(function () {
   $('#login-icon, #login-close').on('click', toggleLoginModal);
 
   $('.task').on('click', showDescription);
+
+  $('.visibility').on('click', togglePasswordVisibility);
 })
 
+function togglePasswordVisibility() {
+  Array.from($('.visibility')).forEach(icon => {
+    if (icon.classList.contains('display-none')) {
+      icon.classList.remove('display-none');
+    } else {
+      icon.classList.add('display-none');
+    }
+  });
+  if ($('#password').attr('type') === 'password') {
+    $('#password').attr('type', 'text');
+  } else {
+    $('#password').attr('type', 'password');
+  }
+}
 
 function showDescription(event) {
   event.stopPropagation();
