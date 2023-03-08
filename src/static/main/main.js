@@ -42,11 +42,6 @@ $(document).ready(function () {
     $(event.currentTarget).css('background-color', '');
   });
 
-  /**
-   * login
-  */
-  $('#login-icon, #login-close').on('click', toggleLoginModal);
-
   $('.task').on('click', showDescription);
 
   $('.visibility').on('click', togglePasswordVisibility);
@@ -73,10 +68,6 @@ function showDescription(event) {
     task.classList.remove('max-height-40');
   });
   $(this).toggleClass('max-height-40');
-}
-
-function toggleLoginModal() {
-  $('.login-section').toggleClass('flex');
 }
 
 function toggleTheme() {
