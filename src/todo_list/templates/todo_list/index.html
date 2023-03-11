@@ -15,7 +15,13 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-  <title>Your List</title>
+  <title>
+  {% if user.is_authenticated %}
+    {{user.username | title}}'s Tasks
+  {% else %}
+    Your List
+  {% endif %}
+  </title>
 </head>
 
 <body class="light" id="body">

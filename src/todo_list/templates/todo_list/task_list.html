@@ -7,10 +7,20 @@
       <i class="nav-icon material-symbols-outlined" id="theme-toggler-icon" title="Dark mode"
         onclick="toggleTheme()">dark_mode</i>
     </span>
+    {% if user.is_authenticated %}
+      {{user.username | title}}'s Tasks
+    {% else %}
+      Public Access Tasks
+    {% endif %}
     <span class="nav-right-column">
       <i class="nav-icon material-symbols-outlined" title="Add folder">create_new_folder</i>
       <i class="nav-icon material-symbols-outlined" title="Add Task">post_add</i>
-      <a href="/login"><i class="nav-icon material-symbols-outlined" id="login-icon" title="Log in">login</i></a>
+
+      {% if user.is_authenticated %}
+        <a href="/logout"><i class="nav-icon material-symbols-outlined" id="logout-icon" title="Log out">login</i></a>
+      {% else %}
+        <a href="/login"><i class="nav-icon material-symbols-outlined" id="login-icon" title="Log in">login</i></a>
+      {% endif %}
     </span>
   </nav>
 

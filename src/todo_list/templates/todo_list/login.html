@@ -17,16 +17,18 @@
         </div>
 
         <div class="login-form-container w-full">
-            <form action="POST" class="flex flex-column items-center w-full my-4">
+            <form method="POST" class="flex flex-column items-center w-full my-4">
                 {% csrf_token %}
+                {{ form.non_field_errors }}
                 <span class="flex justify-between w-half py-1">
                     <label class="items-center flex" for="name">Username:</label>
-                    <input class="h-5 items-center pl-4" type="text" name="name" placeholder="Username" id="">
+                    {{ form.username }}
+                    {{ form.username.errors }}
                 </span>
                 <span class="flex justify-between w-half py-1">
                     <label class="items-center flex" for="password">Password:</label>
-                    <input class="h-5 items-center pl-4" type="password" name="password" placeholder="Password"
-                        id="password">
+                    {{ form.password }}
+                    {{ form.password.errors }}
                 </span>
                 <span class="flex justify-between w-half py-1">
                     <span class="flex">
@@ -40,6 +42,7 @@
                         visibility_off
                     </i>
                 </span>
+                <input type="submit" value="Log in">
             </form>
         </div>
 
