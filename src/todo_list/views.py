@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 
 def logout_view(request):
     logout(request)
-    return render(request, '')
+    return render(request, 'mainApp')
 
 
 def mainApp(request):
