@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Folder, Task
 from django.contrib.auth import logout
-from django.http import HttpResponseRedirect
+from rest_framework import viewsets
+from .serializers import FolderSerializer, TaskSerializer, UserSerializer
+from django.contrib.auth.models import User
 
 
 def logout_view(request):
@@ -48,3 +50,19 @@ def mainApp(request):
 
             }
         )
+
+
+# ViewSets define the view behavior.
+class FolderViewSet(viewsets.ModelViewSet):
+    queryset = Folder.objects.all()
+    serializer_class = FolderSerializer
+
+
+class TaskViewSet(viewsets.ModelViewSet):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
