@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
+from todo_list import views
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'folders', views.FolderViewSet)
+router.register(r'tasks', views.TaskViewSet)
+router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('todo_list.urls')),
+    path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
